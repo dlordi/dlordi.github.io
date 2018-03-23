@@ -82,8 +82,9 @@ footer {
 	display: flex;
 
 	flex-direction: column; /* specify main direction for flexbox */
-	justify-content: start; /* flexbox alignment for main direction */
-	align-items: center; /* flexbox alignment for cross direction */
+	/* TODO: fix this style... need to better understand how it works */
+	justify-content: center; /* flexbox alignment for main direction */
+	align-items: start; /* flexbox alignment for cross direction */
 }
 
 .header-item, .footer-item {
