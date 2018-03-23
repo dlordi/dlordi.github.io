@@ -1,20 +1,60 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
 	font-family: sans-serif;
 	margin: 0;
+
+	/* to use grid layout, the container tag must have the following property */
+	display: grid;
+
+	/* the grid layout works on both dimensions, so it's possible to specify how columns and rows are sized */
+	grid-template-columns:
+		30% /* side bar */
+		auto /* main content */
+	;
+	grid-template-rows:
+		60px /* header */
+		auto /* main content */
+		60px /* footer */
+	;
+	/* to span across cells, it's possible to define names */
+	grid-template-areas:
+		"header-area header-area"
+		"sidebar-area main-area"
+		"footer-area footer-area"
+	;
 }
+
 header, aside, main, footer {
 	padding: 16px;
 	text-align: center;
 }
+
 header {
 	background: #521751;
+	grid-area: header-area;
 }
+
 aside {
 	background: #fa923f;
+	grid-area: sidebar-area;
 }
+
+main {
+	grid-area: main-area;
+}
+
 footer {
 	background: black;
+	grid-area: footer-area;
+}
+
+.navigation-list {
+
+}
+
+.navigation-item {
+	
 }
