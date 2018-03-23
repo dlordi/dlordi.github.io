@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+header, aside, main, footer {
+	padding: 16px;
+	text-align: center;
+}
+header {
+	background: #521751;
+}
+aside {
+	background: #fa923f;
+}
+footer {
+	background: black;
+}
