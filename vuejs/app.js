@@ -1,7 +1,7 @@
 
 Vue.use(Vuetify);
 // Vue.use(VueRouter);
-// Vue.use(Vuex);
+Vue.use(Vuex);
 
 const app = new Vue({
   el: 'v-app',
@@ -51,6 +51,13 @@ const app = new Vue({
     },
   },
 
+  store: new Vuex.Store({
+    state: {},
+    mutations: {},
+    actions: {},
+    getters: {},
+  }),
+
   /*
   router: new VueRouter({
     routes: [
@@ -64,12 +71,4 @@ const app = new Vue({
   }),
   */
 
-  /*
-  store: new Vuex.Store({
-    state: {},
-    mutations: {},
-    actions: {},
-    getters: {},
-  }),
-  */
 })
