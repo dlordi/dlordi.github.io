@@ -28,7 +28,7 @@ const app = new Vue({
       headers: [
         { value: 'h1', text: 'Header 1', align: 'left', },
         { value: 'h2', text: 'Header 2', align: 'center', },
-        { value: 'h3', text: 'Header 2', align: 'right', },
+        { value: 'h3', text: 'Header 3', align: 'right', },
       ],
       items: [
         { h1: '1.1', h2: '1.2', h3: '1.3', },
