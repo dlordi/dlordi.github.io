@@ -1,6 +1,6 @@
 
 Vue.use(Vuetify);
-// Vue.use(VueRouter);
+Vue.use(VueRouter);
 Vue.use(Vuex);
 
 const app = new Vue({
@@ -60,7 +60,6 @@ const app = new Vue({
     getters: {},
   }),
 
-  /*
   router: new VueRouter({
     routes: [
       { path: '/', component: {template: '<h1>INDEX</h1>'}, },
@@ -71,6 +70,5 @@ const app = new Vue({
     // che deve essere restituito dal web server
     // mode: 'history',
   }),
-  */
 
 });
