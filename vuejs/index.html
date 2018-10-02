@@ -2,20 +2,19 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link href="favicon.ico" rel="icon">
-  <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet"-->
-  <!--link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet"-->
-  <link href="assets/roboto.css" rel="stylesheet">
-  <link href="assets/vuetify.min.css" rel="stylesheet">
-  <title>Vuetify app</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <!--link href="assets/roboto.css" rel="stylesheet"-->
+  <!--link href="assets/vuetify.min.css" rel="stylesheet"-->
+  <title>Application</title>
 </head>
 <body>
-
   <v-app dark>
     <!-- -->
-    <v-navigation-drawer app clipped v-model="navLeft.drawer">
+    <v-navigation-drawer app clipped v-model="navLeft.visible">
       <v-list>
         <v-list-tile>
           <!--v-list-tile-avatar><img src="85.jpg" /></v-list-tile-avatar-->
@@ -26,11 +25,11 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+      <v-divider></v-divider>
       <v-list dense>
-        <v-divider></v-divider>
-        <v-list-tile v-for="(tile, key) in navLeft.tiles" :key="key" :to="tile.link" @click="navLeftTileClick(tile)">
+        <v-list-tile v-for="(tile, key) in navLeft.tiles" :key="key" @click="navLeftTileClick(tile)">
           <v-list-tile-action>
-            <v-icon>{{ tile.icon }}</v-icon>
+            <v-icon v-if="tile.icon">{{ tile.icon }}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>{{ tile.title }}</v-list-tile-title>
@@ -41,7 +40,7 @@
 
     <!-- -->
     <v-toolbar app clipped-left>
-      <v-toolbar-side-icon @click.stop="navLeft.drawer = !navLeft.drawer"></v-toolbar-side-icon>
+      <v-toolbar-side-icon @click.stop="navLeft.visible = !navLeft.visible"></v-toolbar-side-icon>
       <v-toolbar-title>Application</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-xs-only">
@@ -61,8 +60,8 @@
         <v-data-table :headers="dtbSimple.headers" :items="dtbSimple.items">
           <template slot="items" scope="props">
             <td>{{ props.item.h1 }}</td>
-            <td>{{ props.item.h2 }}</td>
-            <td>{{ props.item.h3 }}</td>
+            <td class="text-xs-right">{{ props.item.h2 }}</td>
+            <td class="text-xs-right">{{ props.item.h3 }}</td>
           </template>
         </v-data-table>
 
@@ -76,7 +75,7 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn flat @click.native.stop="dlgSimpleActionClick()">OK</v-btn>
+              <v-btn flat @click.stop="dlgSimpleActionClick()">OK</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>
@@ -89,13 +88,15 @@
     </v-footer>
   </v-app>
 
-  <!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
-  <!--script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script-->
-  <script src="assets/vue.min.js"></script>
-  <script src="assets/vuetify.min.js"></script>
-  <!-- script src="assets/vue-router.min.js"></script-->
-  <script src="assets/vuex.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuex/dist/vuex.min.js"></script>
+  <!--script src="assets/vue.min.js"></script-->
+  <!--script src="assets/vuetify.min.js"></script-->
+  <!-- script src="assets/vue-router.min.js"></script -->
+  <!--script src="assets/vuex.min.js"></script-->
 
+  <script src="app.js"></script>
 </body>
 </html>

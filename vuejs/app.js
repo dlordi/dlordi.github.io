@@ -7,23 +7,22 @@ const app = new Vue({
   el: 'v-app',
   data: {
     navLeft: {
-      drawer: true,
+      visible: true,
       tiles: [
-        { title: 'Dashboard', icon: 'dashboard', link: '/dashboard', },
-        { title: 'Settings', icon: 'settings', link: '/settings', },
+        { icon: 'dashboard', title: 'Dashboard', link: '/dashboard', },
+        { icon: 'settings', title: 'Settings', link: '/settings', },
       ],
     },
+
     tbrTop: {
       items: [
         { title: 'Home', icon: 'dashboard', link: '/home', },
         { title: 'About', icon: 'question_answer', link: '/about', },
       ]
     },
-    dlgSimple: {
-      visible: false,
-      title: '',
-      text: '',
-    },
+
+    dlgSimple: { visible: false, title: '', text: '', },
+
     dtbSimple: {
       headers: [
         { value: 'h1', text: 'Header 1', align: 'left', },
@@ -35,6 +34,9 @@ const app = new Vue({
         { h1: '2.1', h2: '2.2', h3: '2.3', },
       ],
     },
+  },
+
+  mounted() {
   },
 
   methods: {
@@ -71,4 +73,4 @@ const app = new Vue({
   }),
   */
 
-})
+});
