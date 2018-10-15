@@ -1,0 +1,16 @@
+{
+  "name": "A basic progressive PWA",
+  "short_name": "Basic PWA",
+  "start_url": ".",
+  "display": "standalone", // "fullscreen", "browser"
+  "orientation": "portrait",
+  "background_color": "#ccc", // usato nello splashscreen, assieme alle icone
+  "theme_color": "#5faae5", // usato nella titlebar, task switcher, ecc...
+  "icons": [
+    {
+      "src": "app-icon-144x144.png",
+      "sizes": "144x144", // 144x144 è una dimensione obbligatoria
+      "type": "image/png"
+    }
+  ]
+}
