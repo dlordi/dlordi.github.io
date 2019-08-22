@@ -1,4 +1,5 @@
-* [Real Python Tutorials](https://realpython.com)
+* [Real Python Tutorials](https://realpython.com/)
+* [Python Patterns](https://python-patterns.guide/)
 * [PyVideo.org](https://pyvideo.org/)
 * [Reddit](https://www.reddit.com/r/Python/)
 * [Python Insider](https://blog.python.org/)
