@@ -1,3 +1,4 @@
+* [Python Does What?!?](https://www.pythondoeswhat.com/)
 * [Real Python Tutorials](https://realpython.com/)
 * [Reddit](https://www.reddit.com/r/Python/)
 * [Python Insider](https://blog.python.org/)
